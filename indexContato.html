@@ -1,151 +1,642 @@
 <!DOCTYPE html>
-<html lang="en">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<html lang="PT-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <title>Portifólio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #fff;
-            margin: 0;
-            padding: 0;
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Outfit', sans-serif;
+    }
+
+    .icones ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .icones ul li {
+        margin-right: 10px;
+    }
+
+    /* Estilos para dispositivos móveis */
+    @media (max-width: 1290px) {
+        .estiloMenu .menuInterno {
+            flex-direction: column;
+            text-align: center;
         }
 
-        .estiloMenu {
-            background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
-            color: white;
-            box-shadow: 0 0 10px rgb(14, 117, 32);
+        .estiloMenu .menuInterno li {
+            margin-bottom: 10px;
+        }
+
+        .icones ul {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .icones ul li {
+            margin-bottom: 10px;
+        }
+
+        .certificado {
+            width: 100%;
+            box-sizing: border-box;
             padding: 10px;
-            display: flex;
-            justify-content: center;
         }
 
-        .menu {
-            width: auto;
-            border-radius: 10px;
-            padding: 2px;
-            text-align: center;
+        details {
+            flex-direction: column;
+            align-items: flex-start;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        .icones {
+            flex-direction: column;
             display: flex;
         }
 
-        li {
-            margin: 0 15px;
+
+    }
+
+    .menuInterno li {
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .icones ul li.javascriptt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .icones ul li.javascriptt svg {
+        fill: #d5fa05;
+        transition: transform 0.3s ease;
+    }
+
+    .icones ul li.javascriptt svg:hover {
+        transform: scale(1.2);
+    }
+
+    .icones ul li.ht {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .icones ul li.ht svg {
+        fill: #e7b309;
+        transition: transform 0.3s ease;
+    }
+
+    .icones ul li.ht svg:hover {
+        transform: scale(1.2);
+    }
+
+    .icones ul li.cs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .icones ul li.cs svg {
+        fill: #00beee;
+        transition: transform 0.3s ease;
+    }
+
+    .icones ul li.cs svg:hover {
+        transform: scale(1.2);
+    }
+
+    img,
+    svg {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Estilos para os detalhes */
+    details {
+        width: 100%;
+    }
+
+    summary {
+        cursor: pointer;
+    }
+
+    .icones {
+        padding: 10px;
+        margin-top: 10px;
+        display: flex;
+
+    }
+
+    .icones ul {
+        margin: auto;
+    }
+
+    .java {
+        flex: 1;
+    }
+
+    .icones h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .icones .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .icones ul.column {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .icones ul.column li {
+        width: 100%;
+        /* Garante que cada item ocupe toda a largura da coluna */
+        margin-bottom: 20px;
+        /* Espaçamento entre os itens */
+    }
+
+    .icones ul li.java {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .icones ul li.java svg {
+        fill: #f01010;
+        transition: transform 0.3s ease;
+    }
+
+    .icones ul li.java svg:hover {
+        transform: scale(1.2);
+    }
+
+    details {
+        background-color: #333;
+        padding: 80px;
+        border-radius: 5px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    details summary {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    details[open] summary {
+        color: #00fd00;
+    }
+
+    article {
+        margin-top: 10px;
+    }
+
+    article p {
+        margin: 0;
+    }
+
+    .texto {
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+
+    .pagina {
+        background-color: #333;
+        display: flex;
+        padding: 10px;
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+        border-radius: 10px;
+
+    }
+
+    .fex {
+        padding: 10px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        /* Centraliza horizontalmente */
+        align-items: center;
+        /* Centraliza verticalmente */
+
+    }
+
+    body {
+        text-align: center;
+        height: 100vh;
+        background-image: linear-gradient(to right, rgb(22, 19, 36), rgb(9, 10, 51));
+    }
+
+    nav.menu-lateral {
+        width: 70px;
+        height: 100%;
+        background-color: #202020;
+        padding: 40px 0 40px 1%;
+        box-shadow: 3px 0px 0px #40942f;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        transition: 1s;
+        z-index: 999999;
+    }
+
+    nav.menu-lateral.expandir {
+        width: 300px;
+    }
+
+    .btn-expandir {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .btn-expandir>i {
+        color: aliceblue;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    ul {
+        height: 100%;
+        list-style-type: none;
+    }
+
+    ul li.item-menu a {
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 20px 4%;
+        display: flex;
+        margin-bottom: 20px;
+        line-height: 40px;
+    }
+
+    ul li.item-menu a .txt-link {
+        margin-left: 70px;
+        transition: 1s;
+        opacity: 0;
+    }
+
+    nav.menu-lateral.expandir .txt-link {
+        margin-left: 40px;
+        opacity: 1;
+    }
+
+    ul li.item-menu a .icon>i {
+        font-size: 30px;
+    }
+
+    ul li.item-menu:hover {
+        background-color: #40942f;
+    }
+
+    ul li.item-menu {
+        transition: 0.5s;
+    }
+
+    ul li.ativo {
+        background-color: #40942f;
+    }
+
+    .icones {
+
+        text-align: center;
+        color: white;
+        padding: 40px;
+    }
+
+    .texto {
+
+        text-align: center;
+        color: white;
+    }
+
+    .icones {
+        padding: 10px;
+        margin-top: 10px;
+        display: flex;
+
+    }
+
+    .icones ul {
+        margin: auto;
+    }
+
+    .java {
+        flex: 1;
+    }
+
+    .icones h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .icones .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .icones ul.column {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .icones ul.column li {
+        width: 100%;
+        /* Garante que cada item ocupe toda a largura da coluna */
+        margin-bottom: 20px;
+        /* Espaçamento entre os itens */
+    }
+
+    .icones ul li.java {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .icones ul li.java svg {
+        fill: #f01010;
+        transition: transform 0.3s ease;
+    }
+
+    .icones ul li.java svg:hover {
+        transform: scale(1.2);
+    }
+
+    details {
+        background-color: #333;
+        padding: 80px;
+        border-radius: 5px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    details summary {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    details[open] summary {
+        color: #00fd00;
+    }
+
+    article {
+        margin-top: 10px;
+    }
+
+    article p {
+        margin: 0;
+    }
+
+    .habilidades-container {
+        text-align: center;
+        padding: 20px;
+        border: 2px solid #444;
+        background-color: #2a2a2a;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .habilidades-container h1 {
+        font-size: 2em;
+        letter-spacing: 2px;
+        animation: flicker 2s infinite;
+        color: #d4af37;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px #d4af37, 0 0 15px #d4af37, 0 0 20px #d4af37, 0 0 25px #d4af37;
+    }
+
+    .habilidades-container hr {
+        border: none;
+        height: 1px;
+        background: linear-gradient(to right, #444, #d4af37, #444);
+        margin: 20px 0;
+    }
+
+    @keyframes flicker {
+
+        0%,
+        19.999%,
+        22%,
+        62.999%,
+        64%,
+        64.999%,
+        70%,
+        100% {
+            opacity: .99;
+            text-shadow: none;
         }
 
-        a {
-            text-decoration: none;
-            color: white;
+        20%,
+        21.999%,
+        63%,
+        63.999%,
+        65%,
+        69.999% {
+            opacity: 0.4;
+            text-shadow: none;
         }
 
-        .contact-container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 2s ease-in-out;
-            margin: 20px;
+        70.000%,
+        100% {
+            opacity: 0.99;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px #d4af37, 0 0 15px #d4af37, 0 0 20px #d4af37, 0 0 25px #d4af37;
         }
 
-        .contact-container h1 {
-            margin-bottom: 20px;
+    }
+
+    .contact-container {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        animation: fadeIn 2s ease-in-out;
+        margin: 20px;
+    }
+
+    .contact-container h1 {
+        margin-bottom: 20px;
+    }
+
+    .contact-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        color: white;
+    }
+
+    .contact-item {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        transition: transform 0.3s ease, background 0.3s ease;
+        max-width: 300px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        background: rgba(27, 25, 25, 0.2);
+        flex-direction: column;
+    }
+
+    .contact-item:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .icon {
+        font-size: 1.5em;
+        margin-right: 10px;
+    }
+
+    .info a {
+        color: #1e90ff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .info a:hover {
+        color: #00bfff;
+    }
+
+    @media (max-width: 1436px) {
+        .contact-item {
+            display: flex;
+            flex-direction: column;
         }
 
         .contact-items {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             justify-content: center;
-        }
-
-        .contact-item {
-            margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            transition: transform 0.3s ease, background 0.3s ease;
-            max-width: 300px;
-            flex: 1;
-            display: flex;
+            /* Alinha horizontalmente */
             align-items: center;
-            background: rgba(255, 255, 255, 0.2);
+            /* Alinha verticalmente */
         }
 
-        .contact-item:hover {
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+        .estiloMenu .menuInterno {
+            flex-direction: column;
+            text-align: center;
+            padding: 10px;
         }
 
-        .icon {
-            font-size: 1.5em;
-            margin-right: 10px;
+        .estiloMenu .menuInterno li {
+            margin-bottom: 10px;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
         }
 
-        .info a {
-            color: #1e90ff;
-            text-decoration: none;
-            transition: color 0.3s ease;
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .info a:hover {
-            color: #00bfff;
-        }
-        @media (max-width: 768px) {
-            .estiloMenu .menuInterno {
-                flex-direction: column;
-                text-align: center;
-                padding: 10px;
-            }
+    }
 
-            .estiloMenu .menuInterno li {
-                margin-bottom: 10px;
-            }
-        }
+    .habilidades-container {
+        text-align: center;
+        padding: 20px;
+        border: 2px solid #444;
+        background-color: #2a2a2a;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
+    }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            
-        }
-    </style>
-</head>
+    .habilidades-container h1 {
+        font-size: 2em;
+        letter-spacing: 2px;
+        animation: flicker 2s infinite;
+        color: #d4af37;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px #d4af37, 0 0 15px #d4af37, 0 0 20px #d4af37, 0 0 25px #d4af37;
+    }
+
+    .habilidades-container hr {
+        border: none;
+        height: 1px;
+        background: linear-gradient(to right, #444, #d4af37, #444);
+        margin: 20px 0;
+    }
+</style>
 
 <body>
-    <div class="estiloMenu">
-        <div class="menu">
-            <ul class="menuInterno">
-                <li><a href="index.html">CONHECIMENTOS</a></li><br>
-                <li><a href="indexContato.html">CONTATO</a></li>
-            </ul>
-        </div>
-    </div>
+    <nav class="menu-lateral">
+        <div class="btn-expandir">
+            <i class="bi bi-list" id="btn-exp"></i>
+        </div><br><br>
+        <ul>
+            <li class="item-menu">
+                <a href="index.html">
+                    <span class="icon"><i class="bi bi-fire"></i></span>
+                    <span class="txt-link">HABILIDADES</span>
+                </a>
+            </li>
+            
+            <li class="item-menu ativo">
+                <a href="indexContato.html">
+                    <span class="icon"><i class="bi bi-person-lines-fill"></i></span>
+                    <span class="txt-link">CONTATOS</span>
+                </a>
+            </li>
+            
 
+        </ul>
+    </nav>
+    <div class="habilidades-container">
+        <h1>CONTATO</h1>
+        <hr>
+    </div>
     <div class="contact-container">
-        <h1>Contato</h1>
+
         <div class="contact-items">
             <div class="contact-item">
                 <span class="icon"><i class="fas fa-phone"></i></span>
-                <span class="info"><br><a href="https://api.whatsapp.com/send?phone=5521973060801&text=preciso%20de%20um%20sistema" target="_blank">Clique aqui para enviar mensagem no WhatsApp</a></span>
+                <span class="info"><br><a
+                        href="https://api.whatsapp.com/send?phone=5521973060801&text=preciso%20de%20um%20sistema"
+                        target="_blank">Clique aqui para enviar mensagem no WhatsApp</a></span>
             </div>
             <div class="contact-item">
                 <span class="icon"><i class="fab fa-instagram"></i></span>
-                <span class="info">Instagram: <a href="https://instagram.com/dev_go_an" target="_blank">@dev_go_an</a></span>
+                <span class="info">Instagram: <a href="https://instagram.com/dev_go_an"
+                        target="_blank">@dev_go_an</a></span>
             </div>
             <div class="contact-item">
                 <span class="icon"><i class="fas fa-envelope"></i></span>
@@ -153,11 +644,39 @@
             </div>
             <div class="contact-item">
                 <span class="icon"><i class="fab fa-github"></i></span>
-                <span class="info">GitHub: <a href="https://github.com/ValverdeLGVC" target="_blank">Veja meus projetos</a></span>
+                <span class="info">GitHub: <a href="https://github.com/ValverdeLGVC" target="_blank">Veja meus
+                        projetos</a></span>
             </div>
-            
+
         </div>
-    </div>
+        <div>
+
+            <script>
+                let menuItem = document.querySelectorAll('.item-menu')
+                function selectLink() {
+                    menuItem.forEach((item) =>
+                        item.classList.remove('ativo')
+                    )
+                    this.classList.add('ativo')
+                }
+
+                menuItem.forEach((item) =>
+                    item.addEventListener('click', selectLink)
+                )
+
+                let btnExp = document.querySelector('#btn-exp')
+                let menuSide = document.querySelector('.menu-lateral')
+                btnExp.addEventListener('click', function () {
+                    menuSide.classList.toggle('expandir')
+                })
+            </script>
+            <div>
+                <br><br><br>
+                <br><br><br>
+
+            </div>
+
+
 </body>
 
 </html>
