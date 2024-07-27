@@ -1,516 +1,580 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .estiloMenu {
-            background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
-            color: white;
-            box-shadow: 0 0 10px rgb(14, 117, 32);
-            padding: 10px;
+    <title>Portifólio</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Outfit', sans-serif;
+    }
 
-        }
+    .icones ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+    }
 
-        .menu {
+    .icones ul li {
+        margin-right: 10px;
+    }
 
-            width: auto;
-
-            border-radius: 10px;
-            padding: 2px;
-        }
-
-        ul {
-            list-style-type: none;
-
-        }
-
-        .java {
-
-            height: 28PX;
-            width: 26px;
-
-
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-
-        .estiloMenu {
-            background-color: #1f1f1f;
-            padding: 10px 0;
-        }
-
+    /* Estilos para dispositivos móveis */
+    @media (max-width: 1290px) {
         .estiloMenu .menuInterno {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .menu {
-            display: flex;
-            justify-content: center;
-
+            flex-direction: column;
+            text-align: center;
         }
 
         .estiloMenu .menuInterno li {
-            margin-right: 20px;
-        }
-
-        .menuInterno {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-
-        }
-
-        .icones ul {
-            display: flex;
-            align-items: center;
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .icones ul li {
-            margin-right: 10px;
-        }
-
-        /* Estilos para dispositivos móveis */
-        @media (max-width: 768px) {
-            .estiloMenu .menuInterno {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .estiloMenu .menuInterno li {
-                margin-bottom: 10px;
-            }
-
-            .icones ul {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .icones ul li {
-                margin-bottom: 10px;
-            }
-
-            .certificado {
-                width: 100%;
-                box-sizing: border-box;
-                padding: 10px;
-            }
-
-            details {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .icones {
-                flex-direction: column;
-                display: flex;
-            }
-        }
-
-        .menuInterno li {
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .icones {
-            padding: 10px;
-            margin-top: 10px;
-            display: flex;
-
-        }
-
-        .icones ul {
-            margin: auto;
-        }
-
-        .java {
-            flex: 1;
-        }
-
-        .icones h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .icones .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .icones ul.column {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .icones ul.column li {
-            width: 100%;
-            /* Garante que cada item ocupe toda a largura da coluna */
-            margin-bottom: 20px;
-            /* Espaçamento entre os itens */
-        }
-
-        .icones ul li.java {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin: 10px;
-        }
-
-        .icones ul li.java svg {
-            fill: #f01010;
-            transition: transform 0.3s ease;
-        }
-
-        .icones ul li.java svg:hover {
-            transform: scale(1.2);
-        }
-
-        details {
-            background-color: #333;
-            padding: 80px;
-            border-radius: 5px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-
-        details summary {
-            font-size: 1.1em;
             margin-bottom: 10px;
         }
 
-        details[open] summary {
-            color: #00fd00;
-        }
-
-        article {
-            margin-top: 10px;
-        }
-
-        article p {
-            margin: 0;
-        }
-
-        .texto {
-            text-align: center;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-        }
-
-        .pagina {
-            background-color: #333;
-            display: flex;
-            padding: 10px;
-            margin-top: 10px;
+        .icones ul {
             flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin: 10px;
-            border-radius: 10px;
-
+            align-items: flex-start;
         }
 
-        .fex {
-            padding: 10px;
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            /* Centraliza horizontalmente */
-            align-items: center;
-            /* Centraliza verticalmente */
-
+        .icones ul li {
+            margin-bottom: 10px;
         }
 
         .certificado {
-            width: 98%;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-            height: 600px;
-            border: solid white 1px;
-
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            height: 40px;
-        }
-
-        .info {
-            text-align: right;
-            font-size: 12px;
-        }
-
-        .body {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        h1 {
-            font-size: 18px;
-
-            margin: 10px 0;
-        }
-
-        h2 {
-            font-size: 30px;
-
-            margin: 20px 0;
-        }
-
-        .instructor {
-            font-size: 16px;
-            margin: 10px 0;
-        }
-
-        .name {
-            font-size: 24px;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-
-        .footer {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-        }
-
-        .footer p {
-            font-size: 16px;
-        }
-
-        .certificado {
-            background: url('/mnt/data/certificado01.png') no-repeat center;
-            background-size: cover;
-            background-color: white;
-            /* Restante do CSS */
-        }
-
-        .certificado img {
-            max-width: 150px;
-        }
-
-        .certificado h1 {
-            font-size: 2em;
-            margin: 20px 0;
-            color: #121212;
-        }
-
-        .certificado h2 {
-            font-size: 1.5em;
-            margin: 20px 0;
-            color: #121212;
-        }
-
-        .certificado p {
-            font-size: 1em;
-            margin: 10px 0;
-            color: #121212;
-        }
-
-        .certificado .instrutores {
-            font-weight: bold;
-        }
-
-        .certificado .nome {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin: 30px 0;
-        }
-
-        .certificado .data,
-        .certificado .duracao {
-            margin: 10px 0;
-        }
-
-        .certificado .small {
-            font-size: 0.8em;
-            color: #777;
-        }
-
-        ul {
-            display: flex;
-        }
-
-        .gafanhoto {
-            width: 800px;
-            padding: 40px;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            position: relative;
-        }
-
-        .gafanhoto .logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .gafanhoto .logo img {
-            width: 50px;
-            margin-right: 10px;
-        }
-
-        .gafanhoto .titulo {
-            font-size: 40px;
-            color: #4b0082;
-            margin-bottom: 20px;
-        }
-
-        .gafanhoto .conteudo {
-            font-size: 18px;
-            line-height: 1.5;
-            color: #333;
-        }
-
-        .gafanhoto .conteudo .curso {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .gafanhoto .codigo {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .gafanhoto .assinatura {
-            margin-top: 40px;
-            text-align: right;
-        }
-
-        .gafanhoto .assinatura img {
-            width: 150px;
-        }
-
-        .gafanhoto .assinatura p {
-            font-size: 14px;
-            margin-top: 5px;
-            color: #333;
-        }
-
-        .guana {
-            text-align: center;
-        }
-
-        .icones ul li.javascriptt {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin: 10px;
-        }
-
-        .icones ul li.javascriptt svg {
-            fill: #d5fa05;
-            transition: transform 0.3s ease;
-        }
-
-        .icones ul li.javascriptt svg:hover {
-            transform: scale(1.2);
-        }
-
-        .icones ul li.ht {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin: 10px;
-        }
-
-        .icones ul li.ht svg {
-            fill: #e7b309;
-            transition: transform 0.3s ease;
-        }
-
-        .icones ul li.ht svg:hover {
-            transform: scale(1.2);
-        }
-
-        .icones ul li.cs {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin: 10px;
-        }
-
-        .icones ul li.cs svg {
-            fill: #00beee;
-            transition: transform 0.3s ease;
-        }
-
-        .icones ul li.cs svg:hover {
-            transform: scale(1.2);
-        }
-
-        img,
-        svg {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Estilos para os detalhes */
-        details {
             width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
         }
 
-        summary {
-            cursor: pointer;
+        details {
+            flex-direction: column;
+            align-items: flex-start;
         }
-    </style>
-</head>
+
+        .icones {
+            flex-direction: column;
+            display: flex;
+        }
+    }
+
+    .menuInterno li {
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .icones ul li.javascriptt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .icones ul li.javascriptt svg {
+        fill: #d5fa05;
+        transition: transform 0.3s ease;
+    }
+
+    .icones ul li.javascriptt svg:hover {
+        transform: scale(1.2);
+    }
+
+    .icones ul li.ht {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .icones ul li.ht svg {
+        fill: #e7b309;
+        transition: transform 0.3s ease;
+    }
+
+    .icones ul li.ht svg:hover {
+        transform: scale(1.2);
+    }
+
+    .icones ul li.cs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .icones ul li.cs svg {
+        fill: #00beee;
+        transition: transform 0.3s ease;
+    }
+
+    .icones ul li.cs svg:hover {
+        transform: scale(1.2);
+    }
+
+    img,
+    svg {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Estilos para os detalhes */
+    details {
+        width: 100%;
+    }
+
+    summary {
+        cursor: pointer;
+    }
+
+    .icones {
+        padding: 10px;
+        margin-top: 10px;
+        display: flex;
+
+    }
+
+    .icones ul {
+        margin: auto;
+    }
+
+    .java {
+        flex: 1;
+    }
+
+    .icones h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .icones .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .icones ul.column {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .icones ul.column li {
+        width: 100%;
+        /* Garante que cada item ocupe toda a largura da coluna */
+        margin-bottom: 20px;
+        /* Espaçamento entre os itens */
+    }
+
+    .icones ul li.java {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .icones ul li.java svg {
+        fill: #f01010;
+        transition: transform 0.3s ease;
+    }
+
+    .icones ul li.java svg:hover {
+        transform: scale(1.2);
+    }
+
+    details {
+        background-color: #333;
+        padding: 80px;
+        border-radius: 5px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    details summary {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    details[open] summary {
+        color: #00fd00;
+    }
+
+    article {
+        margin-top: 10px;
+    }
+
+    article p {
+        margin: 0;
+    }
+
+    .texto {
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+
+    .pagina {
+        background-color: #333;
+        display: flex;
+        padding: 10px;
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+        border-radius: 10px;
+
+    }
+
+    .fex {
+        padding: 10px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        /* Centraliza horizontalmente */
+        align-items: center;
+        /* Centraliza verticalmente */
+
+    }
+
+    body {
+        text-align: center;
+        height: 100vh;
+        background-image: linear-gradient(to right, rgb(22, 19, 36), rgb(9, 10, 51));
+    }
+
+    nav.menu-lateral {
+        width: 70px;
+        height: 100%;
+        background-color: #202020;
+        padding: 40px 0 40px 1%;
+        box-shadow: 3px 0px 0px #40942f;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        transition: 1s;
+        z-index: 999999;
+    }
+
+    nav.menu-lateral.expandir {
+        width: 300px;
+    }
+
+    .btn-expandir {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .btn-expandir>i {
+        color: aliceblue;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    ul {
+        height: 100%;
+        list-style-type: none;
+    }
+
+    ul li.item-menu a {
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 20px 4%;
+        display: flex;
+        margin-bottom: 20px;
+        line-height: 40px;
+    }
+
+    ul li.item-menu a .txt-link {
+        margin-left: 70px;
+        transition: 1s;
+        opacity: 0;
+    }
+
+    nav.menu-lateral.expandir .txt-link {
+        margin-left: 40px;
+        opacity: 1;
+    }
+
+    ul li.item-menu a .icon>i {
+        font-size: 30px;
+    }
+
+    ul li.item-menu:hover {
+        background-color: #40942f;
+    }
+
+    ul li.item-menu {
+        transition: 0.5s;
+    }
+
+    ul li.ativo {
+        background-color: #40942f;
+    }
+
+    .icones {
+
+        text-align: center;
+        color: white;
+        padding: 40px;
+    }
+
+    .texto {
+
+        text-align: center;
+        color: white;
+    }
+
+    .icones {
+        padding: 10px;
+        margin-top: 10px;
+        display: flex;
+
+    }
+
+    .icones ul {
+        margin: auto;
+    }
+
+    .java {
+        flex: 1;
+    }
+
+    .icones h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .icones .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .icones ul.column {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .icones ul.column li {
+        width: 100%;
+        /* Garante que cada item ocupe toda a largura da coluna */
+        margin-bottom: 20px;
+        /* Espaçamento entre os itens */
+    }
+
+    .icones ul li.java {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .icones ul li.java svg {
+        fill: #f01010;
+        transition: transform 0.3s ease;
+    }
+
+    .icones ul li.java svg:hover {
+        transform: scale(1.2);
+    }
+
+    details {
+        background-color: #333;
+        padding: 80px;
+        border-radius: 5px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    details summary {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    details[open] summary {
+        color: #00fd00;
+    }
+
+    article {
+        margin-top: 10px;
+    }
+
+    article p {
+        margin: 0;
+    }
+    .habilidades-container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #444;
+            background-color: #2a2a2a;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .habilidades-container h1 {
+            font-size: 2em;
+            letter-spacing: 2px;
+            animation: flicker 2s infinite;
+            color: #d4af37;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px #d4af37, 0 0 15px #d4af37, 0 0 20px #d4af37, 0 0 25px #d4af37;
+        }
+
+        .habilidades-container hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #444, #d4af37, #444);
+            margin: 20px 0;
+        }
+
+        @keyframes flicker {
+            0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+                opacity: .99;
+                text-shadow: none;
+            }
+            20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+                opacity: 0.4;
+                text-shadow: none;
+            }
+            70.000%, 100% {
+                opacity: 0.99;
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px #d4af37, 0 0 15px #d4af37, 0 0 20px #d4af37, 0 0 25px #d4af37;
+            }
+        }
+</style>
 
 <body>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <nav class="menu-lateral">
+        <div class="btn-expandir">
+            <i class="bi bi-list" id="btn-exp"></i>
+        </div><br><br>
+        <ul>
+            <li class="item-menu ativo">
+                <a href="index.html">
+                    <span class="icon"><i class="bi bi-fire"></i></span>
+                    <span class="txt-link">HABILIDADES</span>
+                </a>
+            </li>
+            
+            <li class="item-menu">
+                <a href="indexContato.html">
+                    <span class="icon"><i class="bi bi-person-lines-fill"></i></span>
+                    <span class="txt-link">CONTATOS</span>
+                </a>
+            </li>
+            
 
-    <div class="estiloMenu">
-        <div class="menu">
-            <ul class="menuInterno">
-                <li><a href="index.html"> CONHECIMENTOS</a></li>
-
-                <li><a href="indexContato.html"> CONTATO</a></li>
-            </ul>
-
-        </div>
-    </div><br>
+        </ul>
+    </nav>
     <div class="texto">
-        <h2>Conhecimentos</h2>
-    </div><br><br>
+        <br><br><br><br><br>
+        <div class="pyramid-loader">
+            <style>
+                .pyramid-loader {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%) rotateX(-20deg);
+                    width: 300px;
+                    height: 300px;
+                    display: block;
+                    transform-style: preserve-3d;
+                }
 
-    <div class="icones">
+                .wrapper {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    transform-style: preserve-3d;
+                    animation: spin 4s linear infinite;
+                }
 
+                @keyframes spin {
+                    100% {
+                        transform: rotateY(360deg);
+                    }
+                }
+
+                .pyramid-loader .wrapper .side {
+                    width: 70px;
+                    height: 70px;
+                    /* you can choose any gradient or color you want */
+                    /* background: radial-gradient( #2F2585 10%, #F028FD 70%, #2BDEAC 120%); */
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    transform-origin: center top;
+                    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                }
+
+                .pyramid-loader .wrapper .side1 {
+                    transform: rotateZ(-30deg) rotateY(90deg);
+                    background: conic-gradient(#2BDEAC, #F028FD, #D8CCE6, #2F2585);
+                }
+
+                .pyramid-loader .wrapper .side2 {
+                    transform: rotateZ(30deg) rotateY(90deg);
+                    background: conic-gradient(#2F2585, #D8CCE6, #F028FD, #2BDEAC);
+                }
+
+                .pyramid-loader .wrapper .side3 {
+                    transform: rotateX(30deg);
+                    background: conic-gradient(#2F2585, #D8CCE6, #F028FD, #2BDEAC);
+                }
+
+                .pyramid-loader .wrapper .side4 {
+                    transform: rotateX(-30deg);
+                    background: conic-gradient(#2BDEAC, #F028FD, #D8CCE6, #2F2585);
+                }
+
+                .pyramid-loader .wrapper .shadow {
+                    width: 60px;
+                    height: 60px;
+                    background: #8B5AD5;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    transform: rotateX(90deg) translateZ(-40px);
+                    filter: blur(12px);
+                }
+            </style>
+            <div class="habilidades-container">
+                <h1>HABILIDADES</h1>
+                <hr>
+            </div>
+            <div class="wrapper">
+                <span class="side side1"></span>
+                <span class="side side2"></span>
+                <span class="side side3"></span>
+                <span class="side side4"></span>
+                <span class="shadow"></span>
+                
+            </div>
+        </div>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div  class="icones">
+       
         <ul>
             <li class="java">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="24" height="24">
@@ -519,7 +583,7 @@
                 </svg>
             </li>
 
-            <details style="width: 100px; ">
+            <details style="width: 250px; ">
 
                 <summary>
 
@@ -541,7 +605,7 @@
                     <hr>
 
                     Programação Orientada a Objetos.<br>
-                    
+
                 </article>
             </details>
         </ul>
@@ -554,7 +618,7 @@
                 </svg>
             </li>
 
-            <details style="width: 100px;">
+            <details style="width: 250px; ">
                 <summary>
                     <P>JavaScript Skills</P>
                 </summary>
@@ -565,7 +629,7 @@
                         Manipulação de Estilo com CSS e JavaScript;<br>
                         <hr>
                         Estrutura HTML.<br>
-                        
+
                     </p>
                 </article>
             </details>
@@ -579,7 +643,7 @@
                 </svg>
             </li>
 
-            <details style="width: 100px; ">
+            <details style="width: 250px; ">
                 <summary>
                     <P>HTML 5 Skills</P>
                 </summary>
@@ -592,12 +656,13 @@
                         Elementos de Entrada;<br>
                         <hr>
                         Integração com Sistemas Java Web.<br>
-                        
+
                     </p>
                 </article>
             </details>
         </ul>
     </div>
+   
     <div class="icones">
         <ul>
             <li class="cs">
@@ -608,7 +673,7 @@
                 </svg>
             </li>
 
-            <details style="width: 100px; ">
+            <details style="width: 250px; ">
                 <summary>
                     <P>CSS 3 Skills</P>
                 </summary>
@@ -621,7 +686,7 @@
                         Design Responsivo;<br>
                         <hr>
                         Ajuste de Layout e Elementos.<br>
-                        
+
                     </p>
                 </article>
             </details>
@@ -635,7 +700,7 @@
                 </svg>
             </li>
 
-            <details style="width: 100px; ">
+            <details style="width: 250px; ">
                 <summary>
                     <P>SQL Skills</P>
                 </summary>
@@ -652,7 +717,7 @@
                         Criação de Tabela com Chave Estrangeira;<br>
                         <hr>
                         Consulta com INNER JOIN e Filtros.<br>
-                        
+
                     </p>
                 </article>
             </details>
@@ -666,7 +731,7 @@
                 </svg>
             </li>
 
-            <details style="width: 100px; ">
+            <details style="width: 250px; ">
                 <summary>
                     <P>Angular Skills</P>
                 </summary>
@@ -681,105 +746,40 @@
                         Criação de Rotas;<br>
                         <hr>
                         Uso de CSS e SCSS.<br>
-                        
+
                     </p>
                 </article>
             </details>
         </ul>
+
     </div>
 
-    <div class="texto"><br><br>
-        <h2>Certificados</h2>
+    <script>
+        let menuItem = document.querySelectorAll('.item-menu')
+        function selectLink() {
+            menuItem.forEach((item) =>
+                item.classList.remove('ativo')
+            )
+            this.classList.add('ativo')
+        }
+
+        menuItem.forEach((item) =>
+            item.addEventListener('click', selectLink)
+        )
+
+        let btnExp = document.querySelector('#btn-exp')
+        let menuSide = document.querySelector('.menu-lateral')
+        btnExp.addEventListener('click', function () {
+            menuSide.classList.toggle('expandir')
+        })
+    </script>
+    <div>
+        <br><br><br>
+        <br><br><br>
+       
     </div>
-    <div>
-        <div class="certificado" style="color: black;">
-            <div class="header">
-                <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="Udemy">
-                <div class="info">
-                    <p>Nº do certificado: UC-a953ac3b-72fd-45be-8ef0-e63030e3f342</p>
-                    <p>URL do certificado: ude.my/UC-a953ac3b-72fd-45be-8ef0-e63030e3f342</p>
-                    <p>Número de referência: 0004</p>
-                </div>
-            </div>
-            <div class="body" style="color: black;">
-                <h1>CERTIFICADO DE CONCLUSÃO</h1>
-                <h2>Java WEB com JSP e Mysql</h2>
-                <p class="instructor">Instrutores <strong>Hugo Vasconcelos</strong></p>
-                <p class="name">Luiz Gustavo Valverde de Carvalho</p>
-                <div class="footer">
-                    <p>Data <strong>6 de Março de 2024</strong></p>
-                    <p>Duração <strong>4.5 horas no total</strong></p>
-                </div>
-            </div>
-        </div>
 
-    </div><br>
-    <div>
-        <div class="certificado" style="color: black;">
-            <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="Udemy">
-            <h1>CERTIFICADO DE CONCLUSÃO</h1>
-            <h2>Java 2022 COMPLETO: Do Zero ao Profissional + Projetos!</h2>
-            <p class="instrutores">Instrutores: Leonardo Moura Leitao, Cod3r Cursos Online</p>
-            <p class="nome">Luiz Gustavo Valverde de Carvalho</p>
-            <p class="data">Data: 6 de Março de 2024</p>
-            <p class="duracao">Duração: 77 horas no total</p>
-            <p class="small">Nº do certificado: UC-20dd33fh-0ae8-42ef-9129-82484fcde666<br>
-                URL do certificado: ude.my/UC-20dd33fh-0ae8-42ef-9129-82484fcde666<br>
-                Número de referência: 0004</p>
-        </div>
 
-    </div><br>
-    <div>
-        <div class="certificado">
-            <div class="udemy-logo">
-                <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="Udemy Logo">
-                <div class="cert-info">
-                    <p>Nº do certificado: UC-410ccde8-2a46-4779-b15a-8ea4207b7e17</p>
-                    <p>URL do certificado: ude.my/UC-410ccde8-2a46-4779-b15a-8ea4207b7e17</p>
-                    <p>Número de referência: 0004</p>
-                </div>
-            </div>
-            <h1>CERTIFICADO DE CONCLUSÃO</h1>
-            <p class="subtitle">Instruores <strong>Hugo Vasconcelos</strong></p>
-            <h2 class="title">Cartões e Pix - Apis de Pagamentos</h2>
-            <p class="name">Luiz Gustavo Valverde de Carvalho</p>
-            <p class="date">Data <strong>11 de Fevereiro de 2024</strong></p>
-            <p class="duration">Duração <strong>1 hora no total</strong></p>
-        </div>
-    </div><br>
-    <div>
-        <div class="certificado">
-            <div class="logo">
-                <img style="border-radius:99px;"
-                    src="https://yt3.ggpht.com/-tlw53FVm9i8/AAAAAAAAAAI/AAAAAAAAAAA/wi3IyzrTqJ8/s900-c-k-no-mo-rj-c0xffffff/photo.jpg"
-                    alt="Logo Curso em Vídeo">
-                <h1 style="color: darkblue; font-size: 44px; font-family: 'Roboto Slab', serif;">Curso em Vídeo</h1>
-
-            </div><br>
-            <br><br><br> <br><br><br>
-            <div class="guana">
-                <p class="conteudo"><br><br><br><br>
-                    Certificamos que<br>
-                    <strong>Luiz Gustavo Valverde de Carvalho</strong><br>
-                    Assistiu vídeo-aulas do curso<br>
-                    <span class="curso">ALGORITMO [40 HORAS]</span><br>
-                    Com duração de 40 horas<br>
-                    Com aproveitamento superior a 70%<br>
-                    <br>
-                    14 de março de 2023
-                </p>
-                <p class="codigo">
-                    Código do Certificado: A5459-6297-3
-                </p>
-            </div>
-
-            <p class="codigo">
-                *Certificado válido, amparado pela Lei nº 9.394 de Diretrizes e Bases da Educação Nacional<br>
-                Digital Informática, Serviços E Telecomunicações LTDA – CNPJ: 04.371.843/0001-55
-            </p>
-        </div>
-    </div>
 </body>
-
 
 </html>
