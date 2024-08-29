@@ -289,24 +289,25 @@
         list-style-type: none;
     }
 
+    ul li.item-menu {
+        transition: background-color 0.5s;
+    }
+
     ul li.item-menu a {
         color: aliceblue;
         text-decoration: none;
         font-size: 20px;
-        padding: 20px 4%;
+        padding: 20px;
         display: flex;
-        margin-bottom: 20px;
-        line-height: 40px;
+        align-items: center;
     }
 
     ul li.item-menu a .txt-link {
         margin-left: 20px;
-        transition: 1s;
-        opacity: 0;
+        transition: opacity 1s;
     }
 
     nav.menu-lateral.expandir .txt-link {
-        margin-left: 20px;
         opacity: 1;
     }
 
@@ -316,10 +317,6 @@
 
     ul li.item-menu:hover {
         background-color: #40942f;
-    }
-
-    ul li.item-menu {
-        transition: 0.5s;
     }
 
     ul li.ativo {
@@ -418,43 +415,60 @@
     article p {
         margin: 0;
     }
+
     .habilidades-container {
-            text-align: center;
-            padding: 20px;
-            border: 2px solid #444;
-            background-color: #2a2a2a;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        padding: 20px;
+        border: 2px solid #444;
+        background-color: #2a2a2a;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .habilidades-container h1 {
+        font-size: 2em;
+        letter-spacing: 2px;
+        animation: flicker 2s infinite;
+        color: #d4af37;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px #d4af37, 0 0 15px #d4af37, 0 0 20px #d4af37, 0 0 25px #d4af37;
+    }
+
+    .habilidades-container hr {
+        border: none;
+        height: 1px;
+        background: linear-gradient(to right, #444, #d4af37, #444);
+        margin: 20px 0;
+    }
+
+    @keyframes flicker {
+
+        0%,
+        19.999%,
+        22%,
+        62.999%,
+        64%,
+        64.999%,
+        70%,
+        100% {
+            opacity: .99;
+            text-shadow: none;
         }
 
-        .habilidades-container h1 {
-            font-size: 2em;
-            letter-spacing: 2px;
-            animation: flicker 2s infinite;
-            color: #d4af37;
+        20%,
+        21.999%,
+        63%,
+        63.999%,
+        65%,
+        69.999% {
+            opacity: 0.4;
+            text-shadow: none;
+        }
+
+        70.000%,
+        100% {
+            opacity: 0.99;
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px #d4af37, 0 0 15px #d4af37, 0 0 20px #d4af37, 0 0 25px #d4af37;
         }
-
-        .habilidades-container hr {
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, #444, #d4af37, #444);
-            margin: 20px 0;
-        }
-
-        @keyframes flicker {
-            0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-                opacity: .99;
-                text-shadow: none;
-            }
-            20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-                opacity: 0.4;
-                text-shadow: none;
-            }
-            70.000%, 100% {
-                opacity: 0.99;
-                text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px #d4af37, 0 0 15px #d4af37, 0 0 20px #d4af37, 0 0 25px #d4af37;
-            }
-        }
+    }
 </style>
 
 <body>
@@ -468,15 +482,15 @@
                     <span class="icon"><i class="bi bi-fire"></i></span>
                     <span class="txt-link">HABILIDADES</span>
                 </a>
-            </li>
-            
+            </li><br>
+
             <li class="item-menu">
                 <a href="indexContato.html">
                     <span class="icon"><i class="bi bi-person-lines-fill"></i></span>
                     <span class="txt-link">CONTATOS</span>
                 </a>
             </li>
-            
+
 
         </ul>
     </nav>
@@ -568,13 +582,13 @@
                 <span class="side side3"></span>
                 <span class="side side4"></span>
                 <span class="shadow"></span>
-                
+
             </div>
         </div>
     </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <div style="margin-left: 7%;" class="icones">
-       
+
         <ul>
             <li class="java">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="24" height="24">
@@ -662,7 +676,7 @@
             </details>
         </ul>
     </div>
-   
+
     <div style="margin-left: 7%;" class="icones">
         <ul>
             <li class="cs">
@@ -776,7 +790,7 @@
     <div>
         <br><br><br>
         <br><br><br>
-       
+
     </div>
 
 
